@@ -1,9 +1,6 @@
 package com.company;
 
-import com.supplementary.Clearance;
-import com.supplementary.Job;
-import com.supplementary.LoginData;
-
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Objects;
@@ -18,6 +15,9 @@ public class User {
     private Job job;
     private User supervisor;
     private LoginData loginData;
+    private ArrayList<PersonalFile> createdPersonalFileList;
+    private ArrayList<PersonalFile> associatedPersonalFileList;
+    private ArrayList<ObjectFile> createdObjectFileList;
 
     public User(boolean gender, String name, String surname, Date dob, int plannedRotationMonths, Clearance clearance, Job job, User supervisor, LoginData loginData){
         this.gender=gender;
@@ -30,6 +30,20 @@ public class User {
         this.clearance=clearance;
         this.job=job;
         this.supervisor=supervisor;
+        this.loginData=loginData;
+    }
+
+    public User(boolean gender, String name, String surname, Date dob, int plannedRotationMonths, Clearance clearance, Job job, LoginData loginData){
+        this.gender=gender;
+        this.name=name;
+        this.surname=surname;
+        this.dob=dob;
+        Calendar tempCalendar = Calendar.getInstance();
+        tempCalendar.add(Calendar.MONTH, plannedRotationMonths);
+        this.dopr= tempCalendar.getTime();
+        this.clearance=clearance;
+        this.job=job;
+        this.supervisor=null;
         this.loginData=loginData;
     }
 

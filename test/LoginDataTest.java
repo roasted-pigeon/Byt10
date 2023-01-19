@@ -1,5 +1,5 @@
 import com.control.LoginController;
-import com.supplementary.LoginData;
+import com.company.LoginData;
 import org.junit.Assert;
 import org.junit.Test;
 

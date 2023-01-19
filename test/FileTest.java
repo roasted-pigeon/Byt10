@@ -1,12 +1,8 @@
-import com.company.File;
-import com.company.ObjectFile;
-import com.company.SCPObject;
-import com.company.User;
+import com.company.*;
 import com.supplementary.*;
 import org.junit.Test;
 import org.junit.Assert;
 
-import java.util.Calendar;
 import java.util.Date;
 
 public class FileTest {

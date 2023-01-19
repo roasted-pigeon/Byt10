@@ -1,4 +1,6 @@
-package com.supplementary;
+package com.company;
+
+import java.util.ArrayList;
 
 public enum Department {
     AD("Administrative Department", "This department includes all communication nodes and command centers"),
@@ -19,10 +21,19 @@ public enum Department {
 
     private String name;
     private String description;
+    private ArrayList<Job> jobs = new ArrayList<>();
 
     Department(String name, String description){
         this.name=name;
         this.description=description;
+    }
+
+    public ArrayList<Job> getJobs() {
+        return jobs;
+    }
+
+    public Department[] listDepartments(){
+        return Department.values();
     }
 
     @Override

@@ -2,7 +2,7 @@ package com.control;
 
 import com.company.PersonalFile;
 import com.company.User;
-import com.supplementary.Clearance;
+import com.company.Clearance;
 
 public class PersonalFileController {
     private User associatedUser;

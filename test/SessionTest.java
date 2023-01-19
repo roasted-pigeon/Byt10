@@ -1,6 +1,5 @@
-import com.control.LoginController;
-import com.supplementary.LoginData;
-import com.supplementary.Session;
+import com.company.LoginData;
+import com.company.Session;
 import org.junit.Assert;
 import org.junit.Test;
 

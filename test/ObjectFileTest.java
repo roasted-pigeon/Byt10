@@ -1,6 +1,4 @@
-import com.company.ObjectFile;
-import com.company.SCPObject;
-import com.company.User;
+import com.company.*;
 import com.control.ObjectFileController;
 import com.supplementary.*;
 import org.junit.Test;

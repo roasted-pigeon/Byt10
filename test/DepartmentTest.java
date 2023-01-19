@@ -1,5 +1,4 @@
-import com.supplementary.Clearance;
-import com.supplementary.Department;
+import com.company.Department;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,7 +1,7 @@
 package com.control;
 
 import com.company.User;
-import com.supplementary.Job;
+import com.company.Job;
 
 import java.util.ArrayList;
 

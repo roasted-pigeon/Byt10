@@ -1,4 +1,4 @@
-package com.company;
+package com.supplementary;
 
 public class Guest {
     public Guest(){}

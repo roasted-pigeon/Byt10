@@ -1,6 +1,6 @@
 package com.control;
 
-import com.supplementary.LoginData;
+import com.company.LoginData;
 
 import java.util.ArrayList;
 

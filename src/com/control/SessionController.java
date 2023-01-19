@@ -1,7 +1,7 @@
 package com.control;
 
-import com.supplementary.LoginData;
-import com.supplementary.Session;
+import com.company.LoginData;
+import com.company.Session;
 
 import java.util.ArrayList;
 

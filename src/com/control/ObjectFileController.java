@@ -1,9 +1,9 @@
 package com.control;
 
+import com.company.Clearance;
 import com.company.ObjectFile;
 import com.company.SCPObject;
 import com.company.User;
-import com.supplementary.*;
 
 public class ObjectFileController {
     private User associatedUser;

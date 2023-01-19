@@ -1,6 +1,8 @@
-package com.company;
+package com.supplementary;
 
-import com.supplementary.Clearance;
+import com.company.Clearance;
+import com.company.FileType;
+import com.company.User;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -11,13 +13,15 @@ abstract public class File {
     private Date dateCreated;
     private String docLink;
     private User creator;
+    private FileType fileType;
 
-    public File(String name, Clearance clearance, String docLink, User creator){
+    public File(String name, Clearance clearance, String docLink, User creator, FileType fileType){
         this.name=name;
         this.clearance=clearance;
         this.dateCreated= Calendar.getInstance().getTime();
         this.docLink=docLink;
         this.creator=creator;
+        this.fileType=fileType;
     }
 
     public Clearance getClearance() {

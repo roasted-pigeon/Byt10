@@ -1,5 +1,6 @@
-package com.supplementary;
+package com.company;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -9,8 +10,10 @@ public class LoginData {
     private int status;
     private int loginAttempts;
     private Date expiresDateTime;
+    private User user;
+    private ArrayList<Session> sessions = new ArrayList<>();
 
-    public LoginData(String login, String password){
+    public LoginData(String login, String password, User user){
         this.login=login;
         this.password=password;
         this.status=1;//got to figure out different states of loginData yet
@@ -18,17 +21,25 @@ public class LoginData {
         Calendar tempCalendar = Calendar.getInstance();
         tempCalendar.add(Calendar.MONTH, 1);
         this.expiresDateTime= tempCalendar.getTime();
+        this.user=user;
     }
 
-    public boolean matches(LoginData loginData){
+    public boolean checkDataValidity(LoginData loginData){
         if (this.login.equals(loginData.getLogin())&&this.password.equals(loginData.getPassword())){
             return true;
-        }else if (this.login.equals(loginData.getLogin())&&!this.password.equals(loginData.getPassword())){
-            if(loginAttempts<3) {
-                this.loginAttempts+=1;
+        }else {
+            initiateCountdown(loginData);
+        }
+        return false;
+    }
+
+    public boolean initiateCountdown(LoginData loginData){
+        if (this.login.equals(loginData.getLogin())&&!this.password.equals(loginData.getPassword())) {
+            if (loginAttempts < 3) {
+                this.loginAttempts += 1;
                 return false;
-            }else{
-                this.status=0;
+            } else {
+                this.invalidateData();
                 return false;
             }
         }
@@ -39,7 +50,7 @@ public class LoginData {
         return Calendar.getInstance().getTime().after(this.expiresDateTime);
     }
 
-    public void invalidateLogin(){this.status=0;}
+    public void invalidateData(){this.status=0;}
 
     public boolean isValid(){return this.status==1;}
 

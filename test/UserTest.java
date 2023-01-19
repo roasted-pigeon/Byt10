@@ -1,8 +1,8 @@
 import com.company.User;
-import com.supplementary.Clearance;
-import com.supplementary.Department;
-import com.supplementary.Job;
-import com.supplementary.LoginData;
+import com.company.Clearance;
+import com.company.Department;
+import com.company.Job;
+import com.company.LoginData;
 import org.junit.Assert;
 import org.junit.Test;
 

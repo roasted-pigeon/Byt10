@@ -1,6 +1,6 @@
 package com.control;
 
-import com.company.File;
+import com.supplementary.File;
 import java.util.ArrayList;
 
 public class GeneralFileController {
